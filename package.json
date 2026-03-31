@@ -1,13 +1,16 @@
 {
   "name": "taskapp",
   "version": "1.0.0",
+  "homepage": "https://scarlettmr1.github.io/todolist",
   "main": "expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "deploy": "npx expo export --platform web && gh-pages -d dist"
+    "predeploy": "expo export -p web",
+    "deploy": "gh-pages --nojekyll -d dist"
+    
   },
   "dependencies": {
     "@expo/metro-runtime": "~3.2.1",
@@ -25,5 +28,5 @@
     "@babel/core": "^7.24.0",
     "gh-pages": "^6.1.1"
   },
-  "private": true
+  "private": false
 }
